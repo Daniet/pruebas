@@ -1,0 +1,90 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo">
+        {{ company }}
+      </a>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="input-field col s8 m4 l3">
+      <input placeholder="Placeholder" id="num_bill" type="text" value="{{ num_bill }}">
+      <label for="num_bill">Numero de factura</label>
+    </div>
+    <div class="input-field col s4 m4 l3">
+      <input placeholder="Placeholder" id="box" type="text" value="{{ box }}">
+      <label for="box">Caja</label>
+    </div>
+    <table class="s12 m12 l12">
+        <thead>
+          <tr>
+              <th>
+                Cant
+              </th>
+              <th>
+                Product
+              </th>
+              <th class="right-align">
+                P. Uni
+              </th>
+              <th class="right-align">
+                Total
+              </th>
+          </tr>
+        </thead>
+        <!-- <tbody *ngFor="let product of bill.products">
+          <tr>
+            <td>
+              {{ product.cant }}
+            </td>
+            <td class="truncate">
+              {{ product.name }}
+            </td>
+            <td class="right-align">
+              {{ product.unit }}
+            </td>
+            <td class="right-align">
+              {{ product.unit + product.cant }}
+            </td>
+          </tr>
+        </tbody> -->
+      </table>
+      <table class="col s12 m12 l12 responsive-table">
+        <thead>
+          <tr>
+              <th>
+                Impuesto:
+              </th>
+              <th>
+                Pago:
+              </th>
+              <th>
+                Cambio:
+              </th>
+              <th>
+                Total:
+              </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              {{ tax * 100 }}%
+            </td>
+            <td>
+              {{ way_pay }}
+            </td>
+            <td>
+
+            </td>
+            <td>
+              {{ total }}
+            </td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+  </div>
+</div>
